@@ -1,0 +1,232 @@
+@charset "UTF-8";
+/* general ui, common ui */
+.button {
+    display: inline-block;
+    min-height: 32px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;/*bold*/
+    line-height: 32px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 32px;
+    border-radius: 50px;
+    background-color: #18d26e;
+    transition: .3s;
+}
+
+.button:hover {
+    color: #18d26e;
+    background-color: white;
+}
+
+/* 상단으로 이동 버튼 */
+.back-to-top {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 100%;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    background-color: black;
+    opacity: 0;
+    z-index: 800;
+    transition: 1s;
+}
+
+.back-to-top.on {
+    opacity: 1;
+}
+
+.back-to-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* .back-to-top a svg {
+    fill: yellow;
+} */
+
+/* header */
+#header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0,0,0,.8);
+    z-index: 800;
+}
+
+/* 상단로고 */
+#top-logo {
+    float: left;
+}
+
+#top-logo a {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+/* 상단메뉴 */
+#gnb {
+    float: right;
+}
+
+#gnb ul {
+    overflow: hidden;
+}
+
+#gnb ul li {
+    position: relative;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 15px;
+}
+
+#gnb ul li.on a {
+    color: #18d26e;
+}
+
+/* section area */
+/* section common */
+section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+section > article {
+    text-align: center;
+    padding: 0 20%;
+    color: #ffffff;
+}
+
+section > article > h2 {
+    font-size: 40px;
+}
+
+section > article > p {
+    font-size: 20px;
+}
+
+section#intro {
+    background-image: url('../img/intro/3.jpg');
+}
+
+section#myprofile {
+    background-image: url('../img/bg/profile_bg.jpg');
+}
+section#myprofile:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.92);
+    z-index: 10;
+}
+section#myprofile .row .column .inner img{
+    width: 20%;
+    border-radius: 100%;
+}
+section#myprofile .row .column .inner .job {
+    font-size: 14px;
+    color: #999999;
+}
+section#myprofile .row .column .inner p {
+    padding: 0 30%;
+}
+/*section row 공통부분*/
+section .row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    color: #333333;
+    padding: 120px 0;
+    box-sizing: border-box;
+    z-index: 500;
+}
+section .row .column {
+    flex: 25%;
+}
+section .row .column .inner  {
+    margin: 15px;
+    padding: 15px;
+    border: 1px solid #f1f1f1;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    border-radius: 5px;
+}
+section .row .column .inner h3{
+    margin: 5px 0 10px;
+}
+section .row .column .inner img.shadow {
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    border-radius: 3px;
+
+}
+section .row .column .inner.border-none-type{
+    border: 0;
+    box-shadow: none;
+}
+section .row .column .inner.border-none-type img{
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+
+}
+section .row .column .inner.left-align ul li{
+    text-align: left;
+}
+section .row .column .inner img {
+    width: 100%;
+}
+section .row .column .inner {
+    text-align: center;
+}
+section .row > h2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+section .row > h2:before,section .row > h2:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+section .row >  h2:before {
+    width: 120px;
+    height: 1px;
+    bottom: 1px;
+    background-color: #dddddd;
+}
+section .row > h2:after {
+    width: 40px;
+    height: 3px;
+    bottom: 0;
+    background-color: #18d26e;
+}
